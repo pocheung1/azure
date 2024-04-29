@@ -29,6 +29,7 @@ func main() {
 	if !ok {
 		panic("AZURE_STORAGE_PRIMARY_ACCOUNT_KEY could not be found")
 	}
+
 	cred, err := azblob.NewSharedKeyCredential(accountName, accountKey)
 	handleError(err)
 
